@@ -1,6 +1,10 @@
-# reimbursement-ocr-prototype
+# Reimbursement OCR Prototype
 
-A prototype invoice and receipt parser for the **McMaster Solar Car** reimbursement platform. It tests whether [EasyOCR](https://github.com/JaidedAI/EasyOCR) can pull the key fields off a receipt image accurately enough to pre-fill a reimbursement request.
+<p align="center">
+<img width="496" height="288" alt="Screenshot 2026-11-14 at 14 16 00" src="https://github.com/user-attachments/assets/20795575-676c-44c3-8498-a1aae9f55639" />
+</p>
+
+A machine learning pipeline to prototype automated invoice and receipt parsing for the [**McMaster Solar Car** reimbursement platform](https://github.com/McMaster-Solar-Car-Project/purchase-request-site) via optical character recognition (OCR). It tests whether the model can pull the key fields off of digital and physical receipts accurately enough to pre-fill a reimbursement request. [EasyOCR](https://github.com/JaidedAI/EasyOCR) was evaluated against key project benchmarks and hardware limitations.
 
 ## What it does
 
@@ -39,7 +43,7 @@ output/       generated results
 python src/benchmark.py
 ```
 
-For each receipt, `output/` gets the raw OCR text (`.txt`) and the parsed fields (`.json`). `output/summary.json` holds the overall report:
+For each receipt, `output/` gets the raw OCR text (`.txt`) and the parsed fields (`.json`). `output/summary.json` holds the overall report for the key benchmarks:
 
 - **Size**: model file size
 - **Speed**: load time, average, median, and slowest time per receipt
